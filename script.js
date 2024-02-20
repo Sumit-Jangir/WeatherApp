@@ -51,6 +51,7 @@ function getFromSessionStorage() {
     const localCoordinates = sessionStorage.getItem("user-coordinates");
     if (!localCoordinates) {
         grantAccessContainer.classList.add("active");
+        userInfoContainer.classList.remove("active");
     }
     else {
         const coordinates = JSON.parse(localCoordinates);
